@@ -39,4 +39,4 @@ async def on_message(message):
         if term in message.content.lower():
             await message.channel.send("Transformers is a great movie!")
 
-client.run('Nzc0NzE4Mzg2NDE1NTk5NjI3.X6b2uA.me6hJEeG5f1ccgezumLJfMbCnJQ')
+client.run('YOUR TOKEN HERE: DO NOT UPLOAD TOKEN TO GITHUB. WE WILL ATTACH THE TOKEN BEFORE SENDING THE FILES')

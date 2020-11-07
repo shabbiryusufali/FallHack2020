@@ -4,4 +4,4 @@
 # Dylan Feng/ddf3@sfu.ca/Caldrid
 # Clare Provenzano/cdp4@sfu.ca
 # Emily Zhang/eza11@sfu.ca/borbinaround
-# Jack Foster/jgh2@sfu.ca
+# Jack Foster/jgf2@sfu.ca

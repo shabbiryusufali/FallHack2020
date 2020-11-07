@@ -1,16 +1,42 @@
-#bot.py
+#ShabzBot.py
 import os
-
 import discord
-from dotenv import load_dotenv
-
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+import random
+import datetime
+from discord import File
 
 client = discord.Client()
-
+transformersTerms = ["optimus","prime","autobot","decepticon","robot","transform","megatron"]
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    print('We have logged in as {0.user}'.format(client))
 
-client.run(TOKEN)
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$name'):
+        await message.channel.send('Your name is:')
+        await message.channel.send(message.author)
+    if "$time" in message.content:
+        now = datetime.datetime.now()
+        await message.channel.send('The current date and time is:')
+        await message.channel.send(now)
+    if message.content.startswith('hello'):
+        await message.channel.send('hello')
+    if message.content.startswith('$hello'):
+        helloMsg = random.choice(["Hello", "Bongiorno", "Bonjour", "اسلام عليكم", "Hola"])
+        await message.channel.send(helloMsg)
+    if message.content.startswith('$deny'):
+        noMessage = random.choice(["Hell no", "Shhhh", "No", "Quiet", "Negative"])
+        await message.channel.send(noMessage)
+    if message.content.startswith('$bruh'):
+        photoDir = "imageFolder"
+        photo = random.choice(os.listdir(photoDir))
+        await message.channel.send(file=discord.File(photo))
+    for term in transformersTerms:
+        if term in message.content.lower():
+            await message.channel.send("Transformers is a great movie!")
+
+client.run('Nzc0NzE4Mzg2NDE1NTk5NjI3.X6b2uA.me6hJEeG5f1ccgezumLJfMbCnJQ')

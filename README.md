@@ -1,4 +1,7 @@
 # FallHack2020
+
+# Slideshow to view project and an outline of its capabilities can be found here: https://docs.google.com/presentation/d/1rTEWNnbB62TP1zFt2EVlh-ihjxfNjFrkOh9-vFg5rUg/edit?usp=sharing
+
 # Name/SFU Email/GitHub
 # Shabbir Yusufali/sya167@sfu.ca/shabbiryusufali
 # Dylan Feng/ddf3@sfu.ca/Caldrid
